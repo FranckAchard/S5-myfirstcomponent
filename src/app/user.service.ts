@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  users = [
+  constructor() {
+    this.selectedUser = this.users[0];
+  }
+
+  selectedUser: User;
+
+  users: User[] = [
     {
       'id': 0,
       'name': 'Aisha Eichmann',
@@ -26,5 +33,8 @@ export class UserService {
     }
   ];
 
-  constructor() { }
+  selectUser(u: User) {
+    this.selectedUser = u;
+  }
+
 }
