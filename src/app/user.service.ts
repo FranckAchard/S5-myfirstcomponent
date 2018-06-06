@@ -33,8 +33,8 @@ export class UserService {
     }
   ];
 
-  selectUser(u: User) {
-    this.selectedUser = u;
+  getSelectedUser () {
+    return this.selectedUser;
   }
 
 }

@@ -11,10 +11,11 @@ export class DetailComponent implements OnInit {
 
   user: User;
 
-  constructor(private userService: UserService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
     this.user = this.userService.selectedUser;
+    // this.user = this.userService.getSelectedUser();
   }
 
 }
